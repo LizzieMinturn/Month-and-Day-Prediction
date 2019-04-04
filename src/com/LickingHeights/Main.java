@@ -20,42 +20,47 @@ public class Main {
                 "Is fair and wise and good in every way.");
         System.out.println("Let's find out what day of the week you were born on!");
         System.out.println();
-        
-        System.out.println("What month were you born in?");
-        int m = keyboard.nextInt();//month
-        System.out.println("What day of the month were you born on?");
-        int q = keyboard.nextInt();//day
-        System.out.println("What year were you born in?");
-        int year = keyboard.nextInt();
 
-        int J = year/100;
-        int K = year%100;
+        boolean value = true;
+        while(value) {
 
-        int dayOfWeek = (q+(13*(m+1)/5)+K+(K/4)+(J/4)-2*J)%7;
+            System.out.println("What month were you born in?(as a number)");
+            int m = keyboard.nextInt();//month
+            System.out.println("What day of the month were you born on?");
+            int q = keyboard.nextInt();//day
+            System.out.println("What year were you born in?(ex. 2000)");
+            int year = keyboard.nextInt();
 
-        switch(dayOfWeek){
-            case 0:
-                System.out.println("You were born on a saturday");
-                break;
-            case 1:
-                System.out.println("You were born on a sunday");
-                break;
-            case 2:
-                System.out.println("You were born on a monday");
-                break;
-            case 3:
-                System.out.println("You were born on a tuesday");
-                break;
-            case 4:
-                System.out.println("You were born on a wednesday");
-                break;
-            case 5:
-                System.out.println("You were born on a thursday");
-                break;
-            case 6:
-                System.out.println("You were born on a friday");
-                break;
+            int J = year / 100;
+            int K = year % 100;
+
+            int dayOfWeek = (q + (13 * (m + 1) / 5) + K + (K / 4) + (J / 4) - 2 * J) % 7;
+
+            switch (dayOfWeek) {
+                case 0:
+                    System.out.println("You were born on a saturday");
+                    break;
+                case 1:
+                    System.out.println("You were born on a sunday");
+                    break;
+                case 2:
+                    System.out.println("You were born on a monday");
+                    break;
+                case 3:
+                    System.out.println("You were born on a tuesday");
+                    break;
+                case 4:
+                    System.out.println("You were born on a wednesday");
+                    break;
+                case 5:
+                    System.out.println("You were born on a thursday");
+                    break;
+                case 6:
+                    System.out.println("You were born on a friday");
+                    break;
+            }
+            System.out.println("You can enter another date, if you want!");
+            System.out.println();
         }
-
     }
 }
