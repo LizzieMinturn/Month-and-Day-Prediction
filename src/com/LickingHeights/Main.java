@@ -9,6 +9,18 @@ public class Main {
 
         Scanner keyboard = new Scanner(System.in);
 
+        System.out.println("There is a nursery rhyme that goes:");
+        System.out.println("Monday's child is fair of face,\n" +
+                "Tuesday's child is full of grace,\n" +
+                "Wednesday's child is full of woe,\n" +
+                "Thursday's child has far to go.\n" +
+                "Friday's child is loving and giving,\n" +
+                "Saturday's child works hard for a living,\n" +
+                "But the child born on the Sabbath Day,\n" +
+                "Is fair and wise and good in every way.");
+        System.out.println("Let's find out what day of the week you were born on!");
+        System.out.println();
+        
         System.out.println("What month were you born in?");
         int m = keyboard.nextInt();//month
         System.out.println("What day of the month were you born on?");
