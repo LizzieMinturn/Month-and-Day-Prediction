@@ -11,6 +11,8 @@ public class Main {
 
         System.out.println("What month were you born in?");
         int m = keyboard.nextInt();//month
-
+        System.out.println("What day of the month were you born on?");
+        int q = keyboard.nextInt();//day
+       
     }
 }
