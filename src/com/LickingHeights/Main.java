@@ -31,49 +31,41 @@ public class Main {
             System.out.println("What year were you born in?(ex. 2000)");
             int year = keyboard.nextInt();
 
-
-
-            int J = year/100;
-            int K = year%100;
-
-            int dayOfWeek = (q+(13*(m+1)/5)+K+(K/4)+(J/4)-2*J)%7;
-
-            switch (dayOfWeek) {
-                case 0:
-                    System.out.println("You were born on a saturday.");
-                    System.out.println("According to the poem you are fair of face.");
-                    break;
-                case 1:
-                    System.out.println("You were born on a sunday");
-                    System.out.println("According  to the poem you are full of grace");
-                    break;
-                case 2:
-                    System.out.println("You were born on a monday");
-                    System.out.println("According to the poem you are full of woe");
-                    break;
-                case 3:
-                    System.out.println("You were born on a tuesday");
-
-                    break;
-                case 4:
-                    System.out.println("You were born on a wednesday");
-                    break;
-                case 5:
-                    System.out.println("You were born on a thursday");
-                    break;
-                case 6:
-                    System.out.println("You were born on a friday");
-                    break;
-            }
         }
     }
-
-    public static int modDate(int m, int year){
+    public static int modDate(int m, int year, int q){
         if(m==1 || m==2){
             m=m+12;
             year=year-1;
         }
+        int J = year/100;
+        int K = year%100;
+
+       int h  = (q+(13*(m+1)/5)+K+(K/4)+(J/4)-2*J)%7;
+
+       return h;
     }
-    public static int dayOfWeek(int q, int m, int K, int J){
+    public static int dayOfWeek(int h){
+        switch(h){
+            case 0:
+                System.out.println(bornOnA("Saturday"));
+            case 1:
+                System.out.println(bornOnA("Sunday"));
+            case 2:
+                System.out.println(bornOnA("Monday"));
+            case 3:
+                System.out.println(bornOnA("Tuesday"));
+            case 4:
+                System.out.println(bornOnA("Wednesday"));
+            case 5:
+                System.out.println(bornOnA("Thursday"));
+            case 6:
+                System.out.println(bornOnA("Friday"));
+        }
+
+        return h;
+    }
+    public static String bornOnA(String day){
+        return "You were born on a ";
     }
 }
